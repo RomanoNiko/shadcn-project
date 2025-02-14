@@ -1,0 +1,3 @@
+<template>
+    <DocumentationSidebarMenu />
+</template>
