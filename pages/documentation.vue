@@ -1,7 +1,12 @@
 <script setup lang="ts">
-import SidebarMenu from "~/components/documentation/SidebarMenu.vue";
+definePageMeta({
+    title: "Documentation",
+    description: "Documentation for the Lucide Vue component library.",
+    url: "/documentation",
+    layout: false,
+});
 </script>
 
 <template>
-    <SidebarMenu />
+    <NuxtLayout name="documentation-layout" />
 </template>
