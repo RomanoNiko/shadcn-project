@@ -1,5 +1,9 @@
 <template>
     <div>
-        <DocumentationSidebarMenu />
+        <DocumentationSidebarMenu>
+            <div>
+                <slot />
+            </div>
+        </DocumentationSidebarMenu>
     </div>
 </template>

@@ -45,6 +45,9 @@ const { data } = useSidebar();
                 <Separator orientation="vertical" class="mr-2 h-4" />
                 <DocumentationBreadcrumbMenu />
             </header>
+            <div class="p-3">
+                <slot />
+            </div>
         </SidebarInset>
     </SidebarProvider>
 </template>

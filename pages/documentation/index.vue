@@ -7,5 +7,3 @@ definePageMeta({
     redirect: "/documentation/getting-started/introduction",
 });
 </script>
-
-<template></template>
