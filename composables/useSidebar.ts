@@ -16,16 +16,6 @@ export function useSidebar() {
                 items: [
                     { title: "Routing", url: "#" },
                     { title: "Data Fetching", url: "#", isActive: true },
-                    { title: "Rendering", url: "#" },
-                    { title: "Caching", url: "#" },
-                    { title: "Styling", url: "#" },
-                    { title: "Optimizing", url: "#" },
-                    { title: "Configuring", url: "#" },
-                    { title: "Testing", url: "#" },
-                    { title: "Authentication", url: "#" },
-                    { title: "Deploying", url: "#" },
-                    { title: "Upgrading", url: "#" },
-                    { title: "Examples", url: "#" },
                 ],
             },
             {
@@ -34,10 +24,6 @@ export function useSidebar() {
                 items: [
                     { title: "Components", url: "#" },
                     { title: "File Conventions", url: "#" },
-                    { title: "Functions", url: "#" },
-                    { title: "next.config.js Options", url: "#" },
-                    { title: "CLI", url: "#" },
-                    { title: "Edge Runtime", url: "#" },
                 ],
             },
             {
@@ -46,9 +32,6 @@ export function useSidebar() {
                 items: [
                     { title: "Accessibility", url: "#" },
                     { title: "Fast Refresh", url: "#" },
-                    { title: "Next.js Compiler", url: "#" },
-                    { title: "Supported Browsers", url: "#" },
-                    { title: "Turbopack", url: "#" },
                 ],
             },
         ],
