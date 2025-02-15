@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { DocumentationVersionDropdown } from "#components";
 import { Search } from "lucide-vue-next";
 
 const { data, search } = useSidebar();
+console.log("Sidebar Data:", data);
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const { data, search } = useSidebar();
                     </SidebarMenuItem>
                 </SidebarMenu>
 
-                <form @submit.prevent>
+                <!-- <form @submit.prevent>
                     <SidebarGroup class="py-0">
                         <SidebarGroupContent class="relative">
                             <Label for="search" class="sr-only">Search</Label>
@@ -30,7 +30,7 @@ const { data, search } = useSidebar();
                             />
                         </SidebarGroupContent>
                     </SidebarGroup>
-                </form>
+                </form> -->
             </SidebarHeader>
 
             <SidebarContent>
@@ -66,7 +66,7 @@ const { data, search } = useSidebar();
                 <DocumentationBreadcrumbMenu />
             </header>
 
-            <div class="flex flex-1 flex-col gap-4 p-4">
+            <!-- <div class="flex flex-1 flex-col gap-4 p-4">
                 <div class="grid auto-rows-min gap-4 md:grid-cols-3">
                     <div class="aspect-video rounded-xl bg-muted/50" />
                     <div class="aspect-video rounded-xl bg-muted/50" />
@@ -75,7 +75,7 @@ const { data, search } = useSidebar();
                 <div
                     class="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min"
                 />
-            </div>
+            </div> -->
         </SidebarInset>
     </SidebarProvider>
 </template>
