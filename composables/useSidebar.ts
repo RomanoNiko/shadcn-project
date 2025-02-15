@@ -6,16 +6,26 @@ export function useSidebar() {
                 title: "Getting Started",
                 url: "#",
                 items: [
-                    { title: "Installation", url: "#" },
-                    { title: "Project Structure", url: "#" },
+                    {
+                        title: "Introduction",
+                        url: "/documentation/getting-started/introduction",
+                    },
+                    {
+                        title: "Installation",
+                        url: "/documentation/getting-started/installation",
+                    },
                 ],
             },
             {
                 title: "Building Your Application",
                 url: "#",
                 items: [
-                    { title: "Routing", url: "#" },
-                    { title: "Data Fetching", url: "#", isActive: true },
+                    { title: "Routing", url: "/documentation/" },
+                    {
+                        title: "Data Fetching",
+                        url: "/documentation/",
+                        isActive: true,
+                    },
                 ],
             },
             {

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-    redirect: "/documentation/getting-started/installation",
+    breadcrumb: "Documentation",
+    redirect: "/documentation/getting-started/introduction",
 });
 </script>

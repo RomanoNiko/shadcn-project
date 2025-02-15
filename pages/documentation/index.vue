@@ -4,7 +4,7 @@ definePageMeta({
     description: "Documentation for the Lucide Vue component library.",
     url: "/documentation",
     layout: false,
-    redirect: "/documentation/getting-started/installation",
+    redirect: "/documentation/getting-started/introduction",
 });
 </script>
 

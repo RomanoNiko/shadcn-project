@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { Search } from "lucide-vue-next";
-
-const { data, search } = useSidebar();
-console.log("Sidebar Data:", data);
+const { data } = useSidebar();
 </script>
 
 <template>
@@ -14,23 +11,6 @@ console.log("Sidebar Data:", data);
                         <DocumentationVersionDropdown />
                     </SidebarMenuItem>
                 </SidebarMenu>
-
-                <!-- <form @submit.prevent>
-                    <SidebarGroup class="py-0">
-                        <SidebarGroupContent class="relative">
-                            <Label for="search" class="sr-only">Search</Label>
-                            <SidebarInput
-                                id="search"
-                                v-model="search"
-                                placeholder="Search the docs..."
-                                class="pl-8"
-                            />
-                            <Search
-                                class="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50"
-                            />
-                        </SidebarGroupContent>
-                    </SidebarGroup>
-                </form> -->
             </SidebarHeader>
 
             <SidebarContent>
@@ -46,9 +26,9 @@ console.log("Sidebar Data:", data);
                                     :class="{ 'is-active': subItem.isActive }"
                                     as-child
                                 >
-                                    <a :href="subItem.url">{{
+                                    <NuxtLink :to="subItem.url">{{
                                         subItem.title
-                                    }}</a>
+                                    }}</NuxtLink>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
                         </SidebarMenu>
@@ -65,17 +45,6 @@ console.log("Sidebar Data:", data);
                 <Separator orientation="vertical" class="mr-2 h-4" />
                 <DocumentationBreadcrumbMenu />
             </header>
-
-            <!-- <div class="flex flex-1 flex-col gap-4 p-4">
-                <div class="grid auto-rows-min gap-4 md:grid-cols-3">
-                    <div class="aspect-video rounded-xl bg-muted/50" />
-                    <div class="aspect-video rounded-xl bg-muted/50" />
-                    <div class="aspect-video rounded-xl bg-muted/50" />
-                </div>
-                <div
-                    class="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min"
-                />
-            </div> -->
         </SidebarInset>
     </SidebarProvider>
 </template>

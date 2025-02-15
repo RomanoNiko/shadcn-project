@@ -1,15 +1,22 @@
+<script setup lang="ts">
+const { breadcrumbs } = useBreadcrumb();
+</script>
+
 <template>
     <Breadcrumb>
         <BreadcrumbList>
-            <BreadcrumbItem class="hidden md:block">
-                <BreadcrumbLink href="#">
-                    Building Your Application
-                </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator class="hidden md:block" />
-            <BreadcrumbItem>
-                <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-            </BreadcrumbItem>
+            <template v-for="(crumb, index) in breadcrumbs" :key="crumb.path">
+                <BreadcrumbItem v-if="!crumb.isActive">
+                    <BreadcrumbLink :to="crumb.path">{{
+                        crumb.title
+                    }}</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbItem v-else>
+                    <BreadcrumbPage>{{ crumb.title }}</BreadcrumbPage>
+                </BreadcrumbItem>
+
+                <BreadcrumbSeparator v-if="index < breadcrumbs.length - 1" />
+            </template>
         </BreadcrumbList>
     </Breadcrumb>
 </template>
