@@ -1,3 +1,5 @@
 <template>
-    <DocumentationSidebarMenu />
+    <div>
+        <DocumentationSidebarMenu />
+    </div>
 </template>
