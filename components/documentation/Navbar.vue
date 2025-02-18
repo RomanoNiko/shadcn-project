@@ -1,54 +1,38 @@
 <script setup lang="ts">
 import { Button } from "@/components/ui/button";
 
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { CircleUser, Menu, Package2, Search } from "lucide-vue-next";
 </script>
 
 <template>
-    <div class="flex min-h-screen w-full flex-col">
+    <div class="flex h-auto w-full flex-col">
         <header
             class="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6"
         >
             <nav
                 class="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6"
             >
-                <a
-                    href="#"
+                <nuxt-link
+                    to="/"
                     class="flex items-center gap-2 text-lg font-semibold md:text-base"
                 >
                     <Package2 class="h-6 w-6" />
                     <span class="sr-only">Acme Inc</span>
-                </a>
-                <a
-                    href="#"
+                </nuxt-link>
+                <nuxt-link
+                    to="/"
                     class="text-muted-foreground transition-colors hover:text-foreground"
                 >
                     Home
-                </a>
-                <a
-                    href="#"
+                </nuxt-link>
+                <nuxt-link
+                    to="/documentation"
                     class="text-muted-foreground transition-colors hover:text-foreground"
                 >
                     Documentation
-                </a>
+                </nuxt-link>
             </nav>
             <Sheet>
                 <SheetTrigger as-child>
