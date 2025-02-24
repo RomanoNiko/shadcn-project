@@ -1,5 +1,5 @@
 <template>
-    <div class="grid gap-5 text-sm text-muted-foreground">
+    <div class="grid w-full gap-5 text-md text-muted-foreground">
         <div>
             <h1 class="font-semibold text-primary pb-3">Getting Started</h1>
             <ul class="grid gap-2 pl-4">
@@ -14,7 +14,7 @@
                     >
                 </li>
                 <li>
-                    <NuxtLink to="/docs/configuration">Configuration</NuxtLink>
+                    <NuxtLink to="#">Configuration</NuxtLink>
                 </li>
             </ul>
         </div>
@@ -22,13 +22,13 @@
             <h1 class="font-semibold text-primary pb-3">Installation</h1>
             <ul class="grid gap-2 pl-4">
                 <li>
-                    <NuxtLink to="/docs/vite">Vite</NuxtLink>
+                    <NuxtLink to="#">Vite</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/docs/nuxt">Nuxt</NuxtLink>
+                    <NuxtLink to="#">Nuxt</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/docs/astro">Astro</NuxtLink>
+                    <NuxtLink to="#">Astro</NuxtLink>
                 </li>
             </ul>
         </div>

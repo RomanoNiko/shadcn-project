@@ -1,17 +1,29 @@
+<script setup lang="ts">
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardDescription,
+    CardContent,
+} from "@/components/ui/card";
+</script>
+
 <template>
     <Card>
         <CardHeader>
-            <CardTitle>
+            <CardTitle
+                class="scroll-m-20 text-4xl font-bold tracking-tight pb-3"
+            >
                 <slot name="title"></slot>
             </CardTitle>
-            <CardDescription>
+            <div class="text-lg text-muted-foreground">
                 <slot name="description_title"></slot>
-            </CardDescription>
+            </div>
         </CardHeader>
         <CardContent>
-            <CardDescription>
+            <div class="text-lg text-justify text-black">
                 <slot name="description"></slot>
-            </CardDescription>
+            </div>
         </CardContent>
     </Card>
 </template>

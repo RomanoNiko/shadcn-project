@@ -1,5 +1,21 @@
 <script setup lang="ts">
 const { data } = useSidebar();
+
+import {
+    SidebarProvider,
+    Sidebar,
+    SidebarHeader,
+    SidebarMenu,
+    SidebarMenuItem,
+    SidebarContent,
+    SidebarGroup,
+    SidebarGroupLabel,
+    SidebarGroupContent,
+    SidebarMenuButton,
+    SidebarRail,
+    SidebarInset,
+    SidebarTrigger,
+} from "@/components/ui/sidebar";
 </script>
 
 <template>
@@ -45,8 +61,9 @@ const { data } = useSidebar();
                 <Separator orientation="vertical" class="mr-2 h-4" />
                 <DocumentationBreadcrumbMenu />
             </header>
-            <div class="p-3">
+            <div class="flex p-3">
                 <slot />
+                <!-- <DocumentationInPageNavigation /> -->
             </div>
         </SidebarInset>
     </SidebarProvider>
