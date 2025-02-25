@@ -1,34 +1,9 @@
-<script setup lang="ts">
-definePageMeta({
-    breadcrumb: "Introduction",
-    layout: "documentation-layout",
-});
-</script>
-
 <template>
-    <div class="p-4">
+    <div>
         <h1 class="scroll-m-20 text-4xl font-bold tracking-tight pb-3">
             Introduction
         </h1>
-        <p class="text-lg text-muted-foreground">
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur
-        </p>
-        <h2 class="scroll-m-20 text-2xl font-bold tracking-tight pb-3">Tes1</h2>
-        <p class="text-lg text-muted-foreground">
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur
-        </p>
-        <h2>Tes2</h2>
-        <p>
+        <p class="text-lg text-muted-foreground text-justify">
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -37,4 +12,71 @@ definePageMeta({
             pariatur. Excepteur
         </p>
     </div>
+    <DocumentationDocTabs>
+        <template #preview>
+            <DocumentationDocCard>
+                <template #title>Preview</template>
+                <template #description_title>Preview tampil disini</template>
+                <template #description>
+                    <div>
+                        lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Incidunt ad deleniti
+                        fugiat cupiditate sint perspiciatis quod tenetur
+                        dignissimos praesentium fugit vel, possimus neque
+                        assumenda eaque eveniet in cum quasi debitis.
+                    </div>
+                    <br />
+                    <div>
+                        lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Incidunt ad deleniti
+                        fugiat cupiditate sint perspiciatis quod tenetur
+                        dignissimos praesentium fugit vel, possimus neque
+                        assumenda eaque eveniet in cum quasi debitis.
+                    </div>
+                    <br />
+
+                    <DocumentationPreviewCard>
+                        <template #content>
+                            <Button>Button</Button>
+                        </template>
+                    </DocumentationPreviewCard>
+                </template>
+            </DocumentationDocCard>
+        </template>
+        <template #code>
+            <DocumentationDocCard>
+                <template #title>Code</template>
+                <template #description_title>Code tampil disini</template>
+                <template #description>
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Incidunt ad deleniti fugiat cupiditate sint perspiciatis
+                    quod tenetur dignissimos praesentium fugit vel, possimus
+                    neque assumenda eaque eveniet in cum quasi debitis.
+                </template>
+            </DocumentationDocCard>
+        </template>
+    </DocumentationDocTabs>
 </template>
+
+<script setup>
+import { DocumentationPreviewCard } from "#components";
+
+definePageMeta({
+    breadcrumb: "Introduction",
+    layout: "documentation-layout",
+});
+
+const index = await queryCollection("content").path("/").first();
+</script>

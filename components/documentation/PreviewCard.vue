@@ -1,13 +1,9 @@
-<script setup lang="ts">
-import { Card, CardContent } from "@/components/ui/card";
-</script>
-
 <template>
-    <Card>
-        <CardContent
-            class="flex justify-center items-center p-4 border rounded bg-gray-100 min-h-[200px]"
-        >
-            <slot></slot>
+    <Card
+        class="shadow flex justify-center items-center min-w-[300px] min-h-[200px]"
+    >
+        <CardContent class="flex justify-center items-center text-center">
+            <slot name="content"></slot>
         </CardContent>
     </Card>
 </template>
