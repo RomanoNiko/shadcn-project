@@ -44,6 +44,18 @@ export function useSidebar() {
                     { title: "Fast Refresh", url: "#" },
                 ],
             },
+            {
+                title: "Components",
+                url: "#",
+                items: [
+                    { title: "Button", url: "#" },
+                    { title: "Card", url: "#" },
+                    { title: "Form", url: "#" },
+                    { title: "Modal", url: "#" },
+                    { title: "Table", url: "#" },
+                    { title: "Tabs", url: "#" },
+                ],
+            },
         ],
     };
 
