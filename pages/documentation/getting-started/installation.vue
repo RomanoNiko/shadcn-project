@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="scroll-m-20 text-4xl font-bold tracking-tight pb-3">
+        <h1 class="scroll-m-20 text-5xl font-bold tracking-tight pb-3">
             Installation
         </h1>
         <p class="text-lg text-muted-foreground text-justify">
@@ -34,7 +34,7 @@
 import { DocumentationPreviewCard } from "#components";
 
 definePageMeta({
-    breadcrumb: "Introduction",
+    breadcrumb: "Installation",
     layout: "documentation-layout",
 });
 
