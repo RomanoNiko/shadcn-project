@@ -7,7 +7,9 @@
             class="container mx-auto w-full max-w-full md:max-w-screen-2xl px-0 md:px-10"
         >
             <div class="mx-auto grid w-full max-w-full pb-2">
-                <h1 class="text-3xl font-semibold">Documentation</h1>
+                <h1 class="scroll-m-20 text-4xl font-bold tracking-tight pb-3">
+                    Documentation
+                </h1>
             </div>
             <div
                 class="mx-auto grid w-full max-w-full items-start gap-6 md:grid-cols-[1fr_3fr] lg:grid-cols-[1fr_3fr]"

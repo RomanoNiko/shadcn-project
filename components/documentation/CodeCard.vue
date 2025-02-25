@@ -1,22 +1,44 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 import { Clipboard, ClipboardCheck } from "lucide-vue-next";
 
-const props = defineProps({
-    code: String,
-});
-
 const copied = ref(false);
+const contentText = ref("");
+
+const cleanText = (text) => {
+    return text
+        .split("\n") // Pisahkan teks menjadi array per baris
+        .map((line) => line.trimEnd()) // Hapus spasi di akhir setiap baris
+        .filter((line) => line.length > 0) // Hapus baris kosong
+        .join("\n"); // Gabungkan kembali menjadi string
+};
 
 const copyToClipboard = async () => {
     try {
-        await navigator.clipboard.writeText(props.code);
+        await navigator.clipboard.writeText(contentText.value);
         copied.value = true;
-        setTimeout(() => (copied.value = false), 2000); // Reset setelah 2 detik
+        setTimeout(() => (copied.value = false), 2000);
     } catch (error) {
         console.error("Gagal menyalin teks:", error);
     }
 };
+
+onMounted(async () => {
+    await nextTick(); // Tunggu sampai Vue selesai merender slot
+
+    const preElement = document.querySelector(".copy-content");
+
+    if (preElement) {
+        contentText.value = cleanText(preElement.innerText);
+
+        // Observer untuk menangkap perubahan dalam slot
+        const observer = new MutationObserver(() => {
+            contentText.value = cleanText(preElement.innerText);
+        });
+
+        observer.observe(preElement, { childList: true, subtree: true });
+    }
+});
 </script>
 
 <template>
@@ -33,10 +55,10 @@ const copyToClipboard = async () => {
 
         <CardContent class="p-4 w-full">
             <pre
-                class="text-sm text-gray-300 font-mono whitespace-pre-wrap break-words"
+                class="text-sm text-gray-300 font-mono whitespace-pre-wrap break-words copy-content"
             >
-        <slot name="content"></slot>
-      </pre>
+                <slot name="content"></slot>
+            </pre>
         </CardContent>
     </Card>
 </template>
