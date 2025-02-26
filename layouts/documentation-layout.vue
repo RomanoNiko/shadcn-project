@@ -11,6 +11,7 @@
                     Documentation
                 </h1>
             </div>
+
             <div
                 class="mx-auto grid w-full max-w-full items-start gap-6 md:grid-cols-[1fr_3fr] lg:grid-cols-[1fr_3fr]"
             >
@@ -18,8 +19,9 @@
                 <DocumentationSidebarTest />
 
                 <!-- Konten -->
-                <div class="grid gap-6">
+                <div class="grid gap-3">
                     <DocumentationBreadcrumbMenu />
+                    <Separator />
                     <slot />
                 </div>
             </div>
