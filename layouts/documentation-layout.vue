@@ -13,7 +13,7 @@
             </div>
 
             <div
-                class="mx-auto grid w-full max-w-full items-start gap-6 md:grid-cols-[1fr_3fr] lg:grid-cols-[1fr_3fr]"
+                class="mx-auto grid w-full max-w-full items-start gap-6 md:grid-cols-[1fr_3fr_1fr] lg:grid-cols-[1fr_3fr_1fr]"
             >
                 <!-- Sidebar -->
                 <DocumentationSidebarTest class="hidden md:block" />
@@ -24,6 +24,9 @@
                     <Separator />
                     <slot />
                 </div>
+
+                <!-- in Page Navigation -->
+                <DocumentationInPageNavigation />
             </div>
         </div>
     </main>
