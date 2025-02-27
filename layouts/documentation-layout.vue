@@ -16,7 +16,7 @@
                 class="mx-auto grid w-full max-w-full items-start gap-6 md:grid-cols-[1fr_3fr] lg:grid-cols-[1fr_3fr]"
             >
                 <!-- Sidebar -->
-                <DocumentationSidebarTest />
+                <DocumentationSidebarTest class="hidden md:block" />
 
                 <!-- Konten -->
                 <div class="grid gap-3">

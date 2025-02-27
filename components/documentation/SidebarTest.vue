@@ -3,7 +3,7 @@ const { data } = useSidebar();
 </script>
 
 <template>
-    <div class="grid w-full gap-5 text-md text-muted-foreground">
+    <div class="w-full gap-5 text-md text-muted-foreground">
         <div v-for="item in data.navMain" :key="item.title">
             <h1 class="font-semibold text-primary pb-3">
                 {{ item.title }}

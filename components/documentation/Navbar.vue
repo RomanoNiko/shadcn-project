@@ -46,7 +46,7 @@ import { CircleUser, Menu, Package2, Search } from "lucide-vue-next";
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
-                    <nav class="grid gap-6 text-lg font-medium">
+                    <nav class="grid gap-6 text-lg font-medium pb-5">
                         <a
                             href="#"
                             class="flex items-center gap-2 text-lg font-semibold"
@@ -67,6 +67,7 @@ import { CircleUser, Menu, Package2, Search } from "lucide-vue-next";
                             Documentation
                         </a>
                     </nav>
+                    <DocumentationSidebarTest class="md:hidden" />
                 </SheetContent>
             </Sheet>
             <div

@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-</script>
-
 <template>
     <Tabs default-value="preview" class="w-full">
         <TabsList class="grid w-full grid-cols-2 max-w-sm mx-auto">
