@@ -3,6 +3,12 @@
         <h1 class="scroll-m-20 text-5xl font-bold tracking-tight pb-3">
             Introduction
         </h1>
+        <h2
+            id="Tes1"
+            class="scroll-m-20 border-b pb-2 text-3xl font-bold tracking-tight transition-colors first:mt-0"
+        >
+            Tes1
+        </h2>
         <p class="text-lg text-muted-foreground text-justify">
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -12,6 +18,12 @@
             pariatur. Excepteur
         </p>
         <br />
+        <h2
+            id="Tes2"
+            class="scroll-m-20 border-b pb-2 text-3xl font-bold tracking-tight transition-colors first:mt-0"
+        >
+            Tes2
+        </h2>
         <p class="text-lg text-muted-foreground text-justify">
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -21,6 +33,12 @@
             pariatur. Excepteur
         </p>
         <br />
+        <h2
+            id="tes3"
+            class="scroll-m-20 border-b pb-2 text-3xl font-bold tracking-tight transition-colors first:mt-0"
+        >
+            tes3
+        </h2>
         <p class="text-lg text-muted-foreground text-justify">
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

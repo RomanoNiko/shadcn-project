@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useInPageNav } from "@/composables/useInPageNav";
-
 const { headings, activeHeading } = useInPageNav();
 </script>
 
@@ -9,18 +7,14 @@ const { headings, activeHeading } = useInPageNav();
         v-if="headings.length"
         class="p-4 w-full max-w-xs min-h-[100px] text-md text-muted-foreground"
     >
-        <h2 class="text-primary font-semibold">On This Page</h2>
+        <h1 class="text-primary font-semibold">On This Page</h1>
         <ul class="mt-2 space-y-1">
             <li
                 v-for="heading in headings"
                 :key="heading.id"
-                :class="
-                    activeHeading === heading.id
-                        ? 'text-primary font-semibold'
-                        : ''
-                "
+                :class="activeHeading === heading.id ? '' : ''"
             >
-                <NuxtLink :to="`#${heading.id}`" class="hover:text-primary">
+                <NuxtLink :to="'#' + heading.id" class="hover:text-primary">
                     {{ heading.text }}
                 </NuxtLink>
             </li>

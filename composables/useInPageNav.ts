@@ -1,21 +1,29 @@
-import { ref, onMounted } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
+import { ref, watch, nextTick, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import { useIntersectionObserver, isClient } from "@vueuse/core";
 
 export function useInPageNav() {
     const headings = ref<{ id: string; text: string }[]>([]);
     const activeHeading = ref("");
+    const route = useRoute();
 
-    onMounted(() => {
-        // Ambil hanya elemen <h2>
-        const contentHeadings = Array.from(document.querySelectorAll("h2")).map(
-            (heading) => ({
-                id: heading.id,
-                text: (heading as HTMLElement).innerText,
-            })
-        );
+    const updateHeadings = async () => {
+        if (!isClient) return;
+
+        await nextTick(); // Pastikan semua elemen sudah dimuat
+
+        const container = document.querySelector("main") || document.body;
+        const contentHeadings = Array.from(
+            container.querySelectorAll("h2")
+        ).map((heading) => ({
+            id: heading.id,
+            text: (heading as HTMLElement).innerText,
+        }));
+
+        console.log("Headings ditemukan:", contentHeadings); // Debugging
+
         headings.value = contentHeadings;
 
-        // Gunakan Intersection Observer untuk mendeteksi heading yang aktif
         contentHeadings.forEach((heading) => {
             const element = document.getElementById(heading.id);
             if (element) {
@@ -26,7 +34,10 @@ export function useInPageNav() {
                 });
             }
         });
-    });
+    };
+
+    watch(() => route.fullPath, updateHeadings, { immediate: true });
+    onMounted(updateHeadings);
 
     return { headings, activeHeading };
 }

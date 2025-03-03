@@ -4,6 +4,7 @@
             Installation
         </h1>
         <h2
+            id="Demo"
             class="scroll-m-20 border-b pb-2 text-3xl font-bold tracking-tight transition-colors first:mt-0"
         >
             Demo
@@ -18,6 +19,7 @@
         </p>
         <br />
         <h2
+            id="Usage"
             class="scroll-m-20 border-b pb-2 text-3xl font-bold tracking-tight transition-colors first:mt-0"
         >
             Usage
@@ -32,6 +34,7 @@
         </p>
         <br />
         <h2
+            id="Directive-Usage"
             class="scroll-m-20 border-b pb-2 text-3xl font-bold tracking-tight transition-colors first:mt-0"
         >
             Directive Usage
