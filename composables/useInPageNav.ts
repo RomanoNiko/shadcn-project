@@ -32,8 +32,6 @@ export function useInPageNav() {
             // Urutkan berdasarkan posisi (biar dari atas ke bawah)
             contentHeadings.sort((a, b) => a.top - b.top);
 
-            console.log("Headings ditemukan:", contentHeadings);
-
             // Simpan headings
             headings.value = contentHeadings.map(({ id, text }) => ({
                 id,
@@ -65,7 +63,6 @@ export function useInPageNav() {
     watch(
         () => route.fullPath,
         async () => {
-            console.log("Route berubah, update headings...");
             await nextTick(); // Tunggu agar halaman baru dimuat
             updateHeadings();
         },
