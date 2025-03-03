@@ -10,33 +10,68 @@ export function useInPageNav() {
     const updateHeadings = async () => {
         if (!isClient) return;
 
-        await nextTick(); // Pastikan semua elemen sudah dimuat
+        // Reset headings agar tidak menampilkan data lama
+        headings.value = [];
+        activeHeading.value = "";
 
-        const container = document.querySelector("main") || document.body;
-        const contentHeadings = Array.from(
-            container.querySelectorAll("h2")
-        ).map((heading) => ({
-            id: heading.id,
-            text: (heading as HTMLElement).innerText,
-        }));
+        await nextTick(); // Pastikan halaman baru sudah dimuat
 
-        console.log("Headings ditemukan:", contentHeadings); // Debugging
+        setTimeout(async () => {
+            const container = document.querySelector("main");
+            if (!container) return;
 
-        headings.value = contentHeadings;
+            // Ambil heading dari halaman yang aktif
+            let contentHeadings = Array.from(
+                container.querySelectorAll("h2")
+            ).map((heading) => ({
+                id: heading.id,
+                text: (heading as HTMLElement).innerText,
+                top: (heading as HTMLElement).offsetTop,
+            }));
 
-        contentHeadings.forEach((heading) => {
-            const element = document.getElementById(heading.id);
-            if (element) {
-                useIntersectionObserver(element, ([{ isIntersecting }]) => {
-                    if (isIntersecting) {
-                        activeHeading.value = heading.id;
+            // Urutkan berdasarkan posisi (biar dari atas ke bawah)
+            contentHeadings.sort((a, b) => a.top - b.top);
+
+            console.log("Headings ditemukan:", contentHeadings);
+
+            // Simpan headings
+            headings.value = contentHeadings.map(({ id, text }) => ({
+                id,
+                text,
+            }));
+
+            // Reset observer
+            activeHeading.value = "";
+
+            nextTick(() => {
+                contentHeadings.forEach((heading) => {
+                    const element = document.getElementById(heading.id);
+                    if (element) {
+                        useIntersectionObserver(
+                            element,
+                            ([{ isIntersecting }]) => {
+                                if (isIntersecting) {
+                                    activeHeading.value = heading.id;
+                                }
+                            },
+                            { threshold: [0.5] }
+                        );
                     }
                 });
-            }
-        });
+            });
+        }, 100); // Tambahkan delay kecil untuk memastikan DOM sudah benar-benar diperbarui
     };
 
-    watch(() => route.fullPath, updateHeadings, { immediate: true });
+    watch(
+        () => route.fullPath,
+        async () => {
+            console.log("Route berubah, update headings...");
+            await nextTick(); // Tunggu agar halaman baru dimuat
+            updateHeadings();
+        },
+        { immediate: true }
+    );
+
     onMounted(updateHeadings);
 
     return { headings, activeHeading };
