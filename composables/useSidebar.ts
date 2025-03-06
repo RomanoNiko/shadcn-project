@@ -48,6 +48,7 @@ export function useSidebar() {
                 title: "Components",
                 url: "#",
                 items: [
+                    { title: "Tes", url: "/documentation/components/tes" },
                     { title: "Button", url: "#" },
                     { title: "Card", url: "#" },
                     { title: "Form", url: "#" },

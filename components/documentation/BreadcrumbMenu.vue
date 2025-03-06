@@ -17,6 +17,7 @@ const { breadcrumbs } = useBreadcrumb();
 
                 <BreadcrumbSeparator v-if="index < breadcrumbs.length - 1" />
             </template>
+            <Separator />
         </BreadcrumbList>
     </Breadcrumb>
 </template>
