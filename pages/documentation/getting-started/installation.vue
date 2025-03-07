@@ -70,7 +70,10 @@ const index = await queryCollection("content").path("/").first();
                 <template #code>
                     <DocumentationCodeCard>
                         <template #content>
-                            <ContentRenderer :value="index" />
+                            <ContentRenderer
+                                :value="index"
+                                class="copy-content"
+                            />
                         </template>
                     </DocumentationCodeCard>
                 </template>

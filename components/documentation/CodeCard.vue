@@ -53,7 +53,7 @@ onMounted(async () => {
             <Clipboard v-else class="w-5 h-5 text-gray-400" />
         </button>
 
-        <div class="p-1 text-sm">
+        <div class="p-1 text-sm copy-content">
             <slot name="content"></slot>
         </div>
     </Card>
