@@ -20,6 +20,7 @@ export default defineNuxtConfig({
             markdown: {
                 highlight: {
                     theme: "vitesse-dark",
+                    numberLines: true,
                 },
             },
         },

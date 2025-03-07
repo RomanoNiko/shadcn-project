@@ -20,7 +20,7 @@ const index = await queryCollection("content").path("/").first();
                 >
                     Demo
                 </h2>
-                <p class="text-lg text-muted-foreground text-justify">
+                <p class="text-base text-muted-foreground text-justify">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -35,7 +35,7 @@ const index = await queryCollection("content").path("/").first();
                 >
                     Usage
                 </h2>
-                <p class="text-lg text-muted-foreground text-justify">
+                <p class="text-base text-muted-foreground text-justify">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -50,7 +50,7 @@ const index = await queryCollection("content").path("/").first();
                 >
                     Directive Usage
                 </h2>
-                <p class="text-lg text-muted-foreground text-justify">
+                <p class="text-base text-muted-foreground text-justify">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation

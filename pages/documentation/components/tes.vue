@@ -16,7 +16,7 @@ definePageMeta({
                 >
                     Tes1
                 </h2>
-                <p class="text-lg text-muted-foreground text-justify">
+                <p class="text-base text-muted-foreground text-justify">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -31,7 +31,7 @@ definePageMeta({
                 >
                     Tes2
                 </h2>
-                <p class="text-lg text-muted-foreground text-justify">
+                <p class="text-base text-muted-foreground text-justify">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -46,7 +46,7 @@ definePageMeta({
                 >
                     tes3
                 </h2>
-                <p class="text-lg text-muted-foreground text-justify">
+                <p class="text-base text-muted-foreground text-justify">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -55,7 +55,7 @@ definePageMeta({
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur
                 </p>
                 <br />
-                <p class="text-lg text-muted-foreground text-justify">
+                <p class="text-base text-muted-foreground text-justify">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -64,7 +64,7 @@ definePageMeta({
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur
                 </p>
                 <br />
-                <p class="text-lg text-muted-foreground text-justify">
+                <p class="text-base text-muted-foreground text-justify">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation

@@ -1,5 +1,7 @@
 <template>
-    <div class="relative flex min-h-svh flex-col bg-background">
+    <div
+        class="relative flex min-h-svh flex-col bg-background bg-gradient-to-b from-[#859bb5]/50 via-[#EEF0F2] via-20% to-[#EEF0F2]"
+    >
         <div class="border-grid flex flex-1 flex-col">
             <header
                 class="border-grid sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"

@@ -43,7 +43,7 @@ onMounted(async () => {
 
 <template>
     <Card
-        class="relative flex w-full min-h-[200px] bg-gray-50 shadow rounded-lg overflow-hidden"
+        class="relative flex w-full bg-slate-950 shadow rounded-lg overflow-auto"
     >
         <button
             @click="copyToClipboard"
@@ -53,12 +53,8 @@ onMounted(async () => {
             <Clipboard v-else class="w-5 h-5 text-gray-400" />
         </button>
 
-        <CardContent class="w-full over">
-            <pre
-                class="text-md font-mono whitespace-pre-wrap break-words copy-content"
-            >
-                <slot name="content"></slot>
-            </pre>
-        </CardContent>
+        <div class="p-1 text-sm">
+            <slot name="content"></slot>
+        </div>
     </Card>
 </template>
